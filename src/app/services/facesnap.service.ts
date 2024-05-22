@@ -5,7 +5,6 @@ import { FaceSnap } from '../models/face-snap.model';
   providedIn: 'root',
 })
 export class FacesnapService {
-  face!: FaceSnap | undefined;
   faceSnaps: FaceSnap[] = [
     {
       id: 1,
