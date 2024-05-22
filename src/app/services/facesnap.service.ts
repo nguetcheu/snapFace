@@ -5,6 +5,7 @@ import { FaceSnap } from '../models/face-snap.model';
   providedIn: 'root',
 })
 export class FacesnapService {
+  face!: FaceSnap | undefined;
   faceSnaps: FaceSnap[] = [
     {
       id: 1,
@@ -40,5 +41,21 @@ export class FacesnapService {
 
   getAllfaceSnaps(): FaceSnap[] {
     return this.faceSnaps;
+  }
+
+  getFaceSnapById(faceSnapId: number): FaceSnap {
+    const faceSnap = this.faceSnaps.find(
+      (faceSnap) => faceSnap.id === faceSnapId
+    );
+    if (!faceSnap) {
+      throw new Error('FaceSnap not found!');
+    } else {
+      return faceSnap;
+    }
+  }
+
+  snapFaceSnapById(faceSnapId: number, snapType: 'snap' | 'unsnap'): void {
+    const faceSnap = this.getFaceSnapById(faceSnapId);
+    snapType === 'snap' ? faceSnap.snaps++ : faceSnap.snaps--;
   }
 }
