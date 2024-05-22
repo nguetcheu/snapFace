@@ -8,6 +8,7 @@ import { FaceSnap } from '../models/face-snap.model';
 })
 export class FaceSnapComponent implements OnInit {
   @Input() faceSnap!: FaceSnap;
+  size!: number;
   buttonText!: string;
 
   ngOnInit() {
