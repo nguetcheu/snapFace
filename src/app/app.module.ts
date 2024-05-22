@@ -5,14 +5,9 @@ import { AppComponent } from './app.component';
 import { FaceSnapComponent } from './face-snap/face-snap.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    FaceSnapComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
+  declarations: [AppComponent, FaceSnapComponent],
+  imports: [BrowserModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
