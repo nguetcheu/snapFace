@@ -8,7 +8,13 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
-  declarations: [AppComponent, FaceSnapComponent, FaceSnapListComponent, HeaderComponent, FooterComponent],
+  declarations: [
+    AppComponent,
+    FaceSnapComponent,
+    FaceSnapListComponent,
+    HeaderComponent,
+    FooterComponent,
+  ],
   imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent],
